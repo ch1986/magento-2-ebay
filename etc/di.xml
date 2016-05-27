@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Softwarech\Magento2Ebay\Api\Data\ProfileInterface" type="Softwarech\Magento2Ebay\Model\Profile" />
+    <virtualType name="ProfileGridFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="ProfileGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Softwarech\Magento2Ebay\Model\ResourceModel\Profile\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">ProfileGridFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Softwarech\Magento2Ebay\Model\ResourceModel\Profile\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">softwarech_magento2ebay_profile</argument>
+            <argument name="resourceModel" xsi:type="string">Softwarech\Magento2Ebay\Model\ResourceModel\Profile</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="softwarech_magento2ebay_profile_listing_data_source" xsi:type="string">Softwarech\Magento2Ebay\Model\ResourceModel\Profile\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    
+    <preference for="Softwarech\Magento2Ebay\Api\Data\LocationInterface" type="Softwarech\Magento2Ebay\Model\Location" />
+    <virtualType name="LocationGridFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+        <arguments>
+            <argument name="appliers" xsi:type="array">
+                <item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+                <item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="LocationGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+        <arguments>
+            <argument name="collection" xsi:type="object" shared="false">Softwarech\Magento2Ebay\Model\ResourceModel\Location\Collection</argument>
+            <argument name="filterPool" xsi:type="object" shared="false">LocationGridFilterPool</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Softwarech\Magento2Ebay\Model\ResourceModel\Location\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">softwarech_magento2ebay_location</argument>
+            <argument name="resourceModel" xsi:type="string">Softwarech\Magento2Ebay\Model\ResourceModel\Location</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="softwarech_magento2ebay_location_listing_data_source" xsi:type="string">Softwarech\Magento2Ebay\Model\ResourceModel\Location\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    
+</config>
