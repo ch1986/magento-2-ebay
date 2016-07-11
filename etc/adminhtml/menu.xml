@@ -4,5 +4,6 @@
         <add id="Softwarech_Magento2Ebay::softwarech_magento2ebay_content" title="Magento2Ebay" module="Softwarech_Magento2Ebay" sortOrder="50" parent="Magento_Backend::content" resource="Softwarech_Magento2Ebay::softwarech_magento2ebay_content" />
         <add id="Softwarech_Magento2Ebay::softwarech_magento2ebay_profile" title="Profiles" module="Softwarech_Magento2Ebay" sortOrder="0" parent="Softwarech_Magento2Ebay::softwarech_magento2ebay_content" action="softwarech_magento2ebay/profile" resource="Softwarech_Magento2Ebay::softwarech_magento2ebay_profile"/>
         <add id="Softwarech_Magento2Ebay::softwarech_magento2ebay_location" title="Locations" module="Softwarech_Magento2Ebay" sortOrder="0" parent="Softwarech_Magento2Ebay::softwarech_magento2ebay_content" action="softwarech_magento2ebay/location" resource="Softwarech_Magento2Ebay::softwarech_magento2ebay_location"/>
+        <add id="Softwarech_Magento2Ebay::softwarech_magento2ebay_payment_policy" title="Payment Policies" module="Softwarech_Magento2Ebay" sortOrder="0" parent="Softwarech_Magento2Ebay::softwarech_magento2ebay_content" action="softwarech_magento2ebay/payment_policy" resource="Softwarech_Magento2Ebay::softwarech_magento2ebay_payment_policy"/>
     </menu>
 </config>

@@ -13,6 +13,7 @@
                             <resource id="Softwarech_Magento2Ebay::softwarech_magento2ebay_location_save" title="Save Location" sortOrder="10" />
                             <resource id="Softwarech_Magento2Ebay::softwarech_magento2ebay_location_delete" title="Delete Location" sortOrder="20" />
                         </resource>
+                        <resource id="Softwarech_Magento2Ebay::softwarech_magento2ebay_payment_policy" title="Payment Policies" sortOrder="40" />
                     </resource>
                 </resource>
             </resource>
